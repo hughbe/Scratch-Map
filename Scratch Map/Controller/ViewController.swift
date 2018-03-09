@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         let overlays = CountryOverlays.shared.getOverlays(visited: map.visitedCountries)
+        mapView.zoomLevel = 4
         mapView.addOverlays(overlays)
     }
 
