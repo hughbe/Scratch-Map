@@ -12,12 +12,13 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
-    private var map = Map.shared
+    private var map = Store.shared.currentMap
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        mapView.addOverlays(map.overlays)
+        let overlays = CountryOverlays.shared.getOverlays(visited: map.visitedCountries)
+        mapView.addOverlays(overlays)
     }
 
     @IBAction func mapTapped(_ sender: UITapGestureRecognizer) {
@@ -27,7 +28,7 @@ class ViewController: UIViewController {
 
         let point = sender.location(in: mapView)
         let coordinate = mapView.convert(point, toCoordinateFrom: mapView)
-        guard let country = map.getCountry(from: coordinate) else {
+        guard let country = CountryOverlays.shared.getCountry(from: coordinate) else {
             return
         }
 
@@ -39,7 +40,7 @@ class ViewController: UIViewController {
         }
 
         visitedCountry.visited = !visitedCountry.visited
-        CoreDataStorage.shared.saveContext()
+        Store.shared.saveContext()
     }
 }
 

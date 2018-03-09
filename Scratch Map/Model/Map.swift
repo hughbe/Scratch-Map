@@ -10,45 +10,20 @@ import Foundation
 import GEOSwift
 import MapKit
 
-public class Map {
-    public static let shared = Map()
-    private init() {}
-
-    private lazy var features: Features = {
-        let geoJSONURL = Bundle.main.url(forResource: "countries", withExtension: "geo.json")!
-        let features = try! Features.fromGeoJSON(geoJSONURL)
-        return features!
-    }()
-
-    public lazy var visitedCountries: [VisitedCountry] = {
-        do {
-            return try CoreDataStorage.shared.context.fetch(VisitedCountry.fetchRequest())
-        } catch let error as NSError {
-            fatalError("Unresolved error \(error), \(error.userInfo)")
-        }
-    }()
-
-    private lazy var countries = features.map(Country.init)
-
-    public func getCountry(from coordinate: CLLocationCoordinate2D) -> Country? {
-        return countries.first { $0.contains(coordinate: coordinate) }
-    }
-
+public extension Map {
     public func getVisitedCountry(country: Country) -> VisitedCountry {
-        if let visitedCountry = visitedCountries.first(where: { $0.id == country.name }) {
-            return visitedCountry
+        if let visitedCountry = countries?.first(where: { ($0 as! VisitedCountry).id == country.name }) {
+            return visitedCountry as! VisitedCountry
         }
 
-        let visitedCountry = VisitedCountry(context: CoreDataStorage.shared.context)
+        let visitedCountry = VisitedCountry(context: Store.shared.context)
         visitedCountry.id = country.name
 
-        visitedCountries.append(visitedCountry)
+        addToCountries(visitedCountry)
         return visitedCountry
     }
 
-    public var overlays: [MKOverlay] {
-        let visited = visitedCountries.filter { $0.visited }
-        let overlays = visited.flatMap { country in countries.first { $0.name == country.id }?.overlays}
-        return overlays.flatMap { $0 }
+    public var visitedCountries: [VisitedCountry] {
+        return countries?.map({ $0 as! VisitedCountry }).filter({ $0.visited }) ?? []
     }
 }
