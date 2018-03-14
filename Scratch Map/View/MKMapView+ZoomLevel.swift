@@ -9,9 +9,10 @@
 import MapKit
 
 extension MKMapView {
-    public var zoomLevel: Int {
+    @IBInspectable
+    public var zoomLevel: NSInteger {
         get {
-            return Int(log2(360 * (Double(self.frame.size.width/256) / self.region.span.longitudeDelta)) + 1);
+            return NSInteger(log2(360 * (Double(self.frame.size.width/256) / self.region.span.longitudeDelta)) + 1);
         }
         set {
             setCenterCoordinate(coordinate:self.centerCoordinate, zoomLevel: newValue, animated: false)

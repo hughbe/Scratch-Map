@@ -9,7 +9,7 @@
 import GEOSwift
 import MapKit
 
-public class Country: CustomDebugStringConvertible {
+public class Country: NSObject {
     private let feature: Feature
     public let name: String
 
@@ -33,12 +33,17 @@ public class Country: CustomDebugStringConvertible {
         return []
     }()
 
+    public var fullOverlay: MKOverlay {
+        let shape = feature.geometries!.first!.mapShape()
+        return shape as! MKOverlay
+    }
+
     func contains(coordinate: CLLocationCoordinate2D) -> Bool {
         let geometry = Waypoint(latitude: coordinate.latitude, longitude: coordinate.longitude)!
         return feature.geometries![0].contains(geometry)
     }
 
-    public var debugDescription: String {
+    public override var debugDescription: String {
         return name
     }
 }

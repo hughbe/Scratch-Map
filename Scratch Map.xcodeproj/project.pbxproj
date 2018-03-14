@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E35AAFF20599F7B0015FF95 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E35AB0120599F7B0015FF95 /* Localizable.strings */; };
+		1E7236D92052FA4600619BC7 /* CurrentCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7236D82052FA4600619BC7 /* CurrentCountryView.swift */; };
+		1E7236DB2052FBB800619BC7 /* CurrentCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7236DA2052FBB800619BC7 /* CurrentCountryViewController.swift */; };
 		1E9783C120515B5900A5432C /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9783C020515B5900A5432C /* Map.swift */; };
 		1E9783C620515BF900A5432C /* countries.geo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E9783C520515BF900A5432C /* countries.geo.json */; };
 		1E9783CC205189E000A5432C /* VisitedCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9783CB205189E000A5432C /* VisitedCountry.swift */; };
-		1E9783CE20518ABC00A5432C /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9783CD20518ABC00A5432C /* CoreDataStorage.swift */; };
 		1E9783D02051B11000A5432C /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9783CF2051B11000A5432C /* Country.swift */; };
 		1E9783D22051BBBF00A5432C /* CountryOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9783D12051BBBF00A5432C /* CountryOverlays.swift */; };
 		1E9783D42052887300A5432C /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9783D32052887300A5432C /* Store.swift */; };
 		1E9783D720528B0B00A5432C /* MKMapView+ZoomLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9783D620528B0B00A5432C /* MKMapView+ZoomLevel.swift */; };
 		1EE321652051579600091B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE321642051579600091B98 /* AppDelegate.swift */; };
-		1EE321672051579600091B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE321662051579600091B98 /* ViewController.swift */; };
+		1EE321672051579600091B98 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE321662051579600091B98 /* MapViewController.swift */; };
 		1EE3216A2051579600091B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EE321682051579600091B98 /* Main.storyboard */; };
 		1EE3216D2051579600091B98 /* Scratch_Map.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3216B2051579600091B98 /* Scratch_Map.xcdatamodeld */; };
 		1EE3216F2051579600091B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EE3216E2051579600091B98 /* Assets.xcassets */; };
@@ -37,17 +39,19 @@
 
 /* Begin PBXFileReference section */
 		09F0A113BBFC7A6CFA16461B /* Pods-Scratch Map.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scratch Map.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scratch Map/Pods-Scratch Map.release.xcconfig"; sourceTree = "<group>"; };
+		1E35AB0020599F7B0015FF95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E7236D82052FA4600619BC7 /* CurrentCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCountryView.swift; sourceTree = "<group>"; };
+		1E7236DA2052FBB800619BC7 /* CurrentCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCountryViewController.swift; sourceTree = "<group>"; };
 		1E9783C020515B5900A5432C /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		1E9783C520515BF900A5432C /* countries.geo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.geo.json; sourceTree = "<group>"; };
 		1E9783CB205189E000A5432C /* VisitedCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitedCountry.swift; sourceTree = "<group>"; };
-		1E9783CD20518ABC00A5432C /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		1E9783CF2051B11000A5432C /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		1E9783D12051BBBF00A5432C /* CountryOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryOverlays.swift; sourceTree = "<group>"; };
 		1E9783D32052887300A5432C /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		1E9783D620528B0B00A5432C /* MKMapView+ZoomLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+ZoomLevel.swift"; sourceTree = "<group>"; };
 		1EE321612051579600091B98 /* Scratch Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scratch Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EE321642051579600091B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1EE321662051579600091B98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1EE321662051579600091B98 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1EE321692051579600091B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1EE3216C2051579600091B98 /* Scratch_Map.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Scratch_Map.xcdatamodel; sourceTree = "<group>"; };
 		1EE3216E2051579600091B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,7 +90,6 @@
 				1E9783D12051BBBF00A5432C /* CountryOverlays.swift */,
 				1E9783C020515B5900A5432C /* Map.swift */,
 				1E9783CB205189E000A5432C /* VisitedCountry.swift */,
-				1E9783CD20518ABC00A5432C /* CoreDataStorage.swift */,
 				1E9783D32052887300A5432C /* Store.swift */,
 				1EE3216B2051579600091B98 /* Scratch_Map.xcdatamodeld */,
 			);
@@ -96,7 +99,8 @@
 		1E9783C320515B6300A5432C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1EE321662051579600091B98 /* ViewController.swift */,
+				1EE321662051579600091B98 /* MapViewController.swift */,
+				1E7236DA2052FBB800619BC7 /* CurrentCountryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -110,6 +114,7 @@
 				1EE3216E2051579600091B98 /* Assets.xcassets */,
 				1EE321702051579600091B98 /* LaunchScreen.storyboard */,
 				1EE321732051579600091B98 /* Info.plist */,
+				1E35AB0120599F7B0015FF95 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				1E9783D620528B0B00A5432C /* MKMapView+ZoomLevel.swift */,
+				1E7236D82052FA4600619BC7 /* CurrentCountryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E35AAFF20599F7B0015FF95 /* Localizable.strings in Resources */,
 				1EE321722051579600091B98 /* LaunchScreen.storyboard in Resources */,
 				1EE3216F2051579600091B98 /* Assets.xcassets in Resources */,
 				1EE3216A2051579600091B98 /* Main.storyboard in Resources */,
@@ -304,11 +311,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Scratch Map/Pods-Scratch Map-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
 				"${BUILT_PRODUCTS_DIR}/GEOSwift/GEOSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/geos/geos.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GEOSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/geos.framework",
 			);
@@ -343,14 +352,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E9783D02051B11000A5432C /* Country.swift in Sources */,
+				1E7236D92052FA4600619BC7 /* CurrentCountryView.swift in Sources */,
 				1E9783D22051BBBF00A5432C /* CountryOverlays.swift in Sources */,
-				1EE321672051579600091B98 /* ViewController.swift in Sources */,
+				1EE321672051579600091B98 /* MapViewController.swift in Sources */,
 				1E9783D720528B0B00A5432C /* MKMapView+ZoomLevel.swift in Sources */,
 				1E9783D42052887300A5432C /* Store.swift in Sources */,
 				1EE321652051579600091B98 /* AppDelegate.swift in Sources */,
+				1E7236DB2052FBB800619BC7 /* CurrentCountryViewController.swift in Sources */,
 				1E9783C120515B5900A5432C /* Map.swift in Sources */,
 				1E9783CC205189E000A5432C /* VisitedCountry.swift in Sources */,
-				1E9783CE20518ABC00A5432C /* CoreDataStorage.swift in Sources */,
 				1EE3216D2051579600091B98 /* Scratch_Map.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +384,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1E35AB0120599F7B0015FF95 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E35AB0020599F7B0015FF95 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		1EE321682051579600091B98 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -505,7 +523,6 @@
 			baseConfigurationReference = 4818A62B97ED1462D1869B24 /* Pods-Scratch Map.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 998TJ8ABD3;
 				INFOPLIST_FILE = "$(SRCROOT)/Scratch Map/Resources/Info.plist";
@@ -522,7 +539,6 @@
 			baseConfigurationReference = 09F0A113BBFC7A6CFA16461B /* Pods-Scratch Map.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 998TJ8ABD3;
 				INFOPLIST_FILE = "$(SRCROOT)/Scratch Map/Resources/Info.plist";

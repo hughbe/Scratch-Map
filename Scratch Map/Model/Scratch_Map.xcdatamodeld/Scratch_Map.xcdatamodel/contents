@@ -11,14 +11,16 @@
         <relationship name="map" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Map" inverseName="trips" inverseEntity="Map" syncable="YES"/>
     </entity>
     <entity name="VisitedCountry" representedClassName="VisitedCountry" syncable="YES" codeGenerationType="class">
+        <attribute name="cachedCountry" optional="YES" transient="YES" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="visited" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="map" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Map" inverseName="countries" inverseEntity="Map" syncable="YES"/>
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="countries" inverseEntity="Trip" syncable="YES"/>
     </entity>
     <elements>
-        <element name="VisitedCountry" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="Map" positionX="-54" positionY="9" width="128" height="90"/>
         <element name="Trip" positionX="-27" positionY="36" width="128" height="90"/>
+        <element name="VisitedCountry" positionX="-63" positionY="-18" width="128" height="135"/>
     </elements>
 </model>
