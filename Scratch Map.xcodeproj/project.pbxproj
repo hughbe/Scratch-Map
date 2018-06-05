@@ -11,7 +11,7 @@
 		1E7236D92052FA4600619BC7 /* CurrentCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7236D82052FA4600619BC7 /* CurrentCountryView.swift */; };
 		1E7236DB2052FBB800619BC7 /* CurrentCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7236DA2052FBB800619BC7 /* CurrentCountryViewController.swift */; };
 		1E9783C120515B5900A5432C /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9783C020515B5900A5432C /* Map.swift */; };
-		1E9783C620515BF900A5432C /* countries.geo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E9783C520515BF900A5432C /* countries.geo.json */; };
+		1E9783C620515BF900A5432C /* countries.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1E9783C520515BF900A5432C /* countries.geojson */; };
 		1E9783CC205189E000A5432C /* VisitedCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9783CB205189E000A5432C /* VisitedCountry.swift */; };
 		1E9783D02051B11000A5432C /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9783CF2051B11000A5432C /* Country.swift */; };
 		1E9783D22051BBBF00A5432C /* CountryOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9783D12051BBBF00A5432C /* CountryOverlays.swift */; };
@@ -43,7 +43,7 @@
 		1E7236D82052FA4600619BC7 /* CurrentCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCountryView.swift; sourceTree = "<group>"; };
 		1E7236DA2052FBB800619BC7 /* CurrentCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCountryViewController.swift; sourceTree = "<group>"; };
 		1E9783C020515B5900A5432C /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
-		1E9783C520515BF900A5432C /* countries.geo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.geo.json; sourceTree = "<group>"; };
+		1E9783C520515BF900A5432C /* countries.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countries.geojson; sourceTree = "<group>"; };
 		1E9783CB205189E000A5432C /* VisitedCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitedCountry.swift; sourceTree = "<group>"; };
 		1E9783CF2051B11000A5432C /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		1E9783D12051BBBF00A5432C /* CountryOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryOverlays.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 		1E9783C420515B6900A5432C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1E9783C520515BF900A5432C /* countries.geo.json */,
+				1E9783C520515BF900A5432C /* countries.geojson */,
 				1EE321642051579600091B98 /* AppDelegate.swift */,
 				1EE321682051579600091B98 /* Main.storyboard */,
 				1EE3216E2051579600091B98 /* Assets.xcassets */,
@@ -275,7 +275,7 @@
 				1EE321722051579600091B98 /* LaunchScreen.storyboard in Resources */,
 				1EE3216F2051579600091B98 /* Assets.xcassets in Resources */,
 				1EE3216A2051579600091B98 /* Main.storyboard in Resources */,
-				1E9783C620515BF900A5432C /* countries.geo.json in Resources */,
+				1E9783C620515BF900A5432C /* countries.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,12 +313,16 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Scratch Map/Pods-Scratch Map-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
 				"${BUILT_PRODUCTS_DIR}/GEOSwift/GEOSwift.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
 				"${BUILT_PRODUCTS_DIR}/geos/geos.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GEOSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/geos.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

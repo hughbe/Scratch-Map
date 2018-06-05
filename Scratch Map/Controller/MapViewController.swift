@@ -7,11 +7,13 @@
 //
 
 import GEOSwift
+import Mapbox
 import MapKit
 import UIKit
 
 class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapboxView: MGLMapView!
     @IBOutlet weak var currentCountryView: CurrentCountryView!
 
     private var map = Store.shared.currentMap
@@ -40,7 +42,7 @@ class MapViewController: UIViewController {
         }
 
         let point = sender.location(in: mapView)
-        let coordinate = mapView.convert(point, toCoordinateFrom: mapView)
+        let coordinate = mapboxView.convert(point, toCoordinateFrom: mapboxView)
         guard let country = CountryOverlays.shared.getCountry(from: coordinate) else {
             currentCountry = nil
             return
@@ -51,6 +53,7 @@ class MapViewController: UIViewController {
             // The first tap on a visited country brings up the info pane.
             // The second tap on a visited country clears it's visited status.
             if visitedCountry == currentCountry {
+                MGLShape.
                 visitedCountry.visited = false
                 mapView.removeOverlays(country.overlays)
                 currentCountry = nil

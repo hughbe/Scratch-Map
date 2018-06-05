@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MSm-mq-VME">
+                            <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MSm-mq-VME">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
@@ -31,9 +31,18 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="wKv-dp-SaU"/>
-                                    <outletCollection property="gestureRecognizers" destination="3Hl-ig-GCz" appends="YES" id="l7R-l4-Ntg"/>
                                 </connections>
                             </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HrZ-5l-UHi" customClass="MGLMapView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/hughbe/cjerjr9yw00zl2rpgmrfq3lt2"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3Hl-ig-GCz" appends="YES" id="Sxg-md-qL1"/>
+                                </connections>
+                            </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIW-Wg-Ya3" customClass="CurrentCountryView" customModule="Scratch_Map" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="568" width="375" height="99"/>
                                 <subviews>
@@ -83,17 +92,22 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bIW-Wg-Ya3" secondAttribute="trailing" id="0yh-Lc-WK9"/>
                             <constraint firstItem="MSm-mq-VME" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7yM-aN-jAJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HrZ-5l-UHi" secondAttribute="trailing" id="E8c-Zh-kY3"/>
                             <constraint firstItem="MSm-mq-VME" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KLu-Dj-FG8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MSm-mq-VME" secondAttribute="trailing" id="Wn5-49-Vw5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bIW-Wg-Ya3" secondAttribute="bottom" id="Xaw-27-FvH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MSm-mq-VME" secondAttribute="bottom" id="hlF-g3-VKe"/>
+                            <constraint firstItem="HrZ-5l-UHi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="olH-w4-Tqe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HrZ-5l-UHi" secondAttribute="bottom" id="pvL-zZ-VXq"/>
                             <constraint firstItem="bIW-Wg-Ya3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uks-O4-vCL"/>
+                            <constraint firstItem="HrZ-5l-UHi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xMJ-OJ-61m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="currentCountryView" destination="bIW-Wg-Ya3" id="FbE-NS-tuj"/>
                         <outlet property="mapView" destination="MSm-mq-VME" id="R6n-aX-9Im"/>
+                        <outlet property="mapboxView" destination="HrZ-5l-UHi" id="9bP-54-ymb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

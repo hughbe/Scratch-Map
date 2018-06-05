@@ -15,7 +15,7 @@ public class Country: NSObject {
 
     public init(feature: Feature) {
         self.feature = feature
-        self.name = feature.properties!["name"]! as! String
+        self.name = feature.properties!["ADMIN"]! as! String
     }
 
     public lazy var overlays: [MKOverlay] = {

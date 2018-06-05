@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAllowArbitraryLoads</key>
+	<string>YES</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoiaHVnaGJlIiwiYSI6ImNqZXJlZjludjA5aGcycXFyb2hlNng0am0ifQ.M7dMSiR4QgdaitsZ0FnMjw</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

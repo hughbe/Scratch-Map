@@ -11,5 +11,6 @@ target 'Scratch Map' do
 
   pod 'GEOSwift', :git => 'https://github.com/mojtabacazi/GEOSwift.git', :branch => 'develop'
   pod 'ActionSheetPicker-3.0'
+  pod 'Mapbox-iOS-SDK', '3.7.3'
 
 end
